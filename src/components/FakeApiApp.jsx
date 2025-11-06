@@ -3,7 +3,7 @@ import PostForm from "./PostForm";
 import PostsContainer from "./PostsContainer";
 
 export default function FakeApiApp() {
-    const URL = "https://jsonplaceholder.typicode.com/posts";
+    const API_URL = "https://jsonplaceholder.typicode.com/comments";
 
     
     const [data, setData] = useState([]);
