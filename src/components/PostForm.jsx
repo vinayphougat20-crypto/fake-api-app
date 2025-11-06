@@ -1,33 +1,18 @@
-export default function PostForm({ newPost, onChange, onSubmit }) {
-  return (
-    <div className="post-form-container">
-      <h1>Post Form</h1>
-      <form onSubmit={onSubmit} className="post-form">
-        <div className="form-row">
-        <label htmlFor="title">Title:</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={newPost.title}
-          onChange={onChange}
-          className="post-input"
-        />
-        </div>
-        <div className="form-row">
-        <label htmlFor="body">Body:</label>
-        <input
-          type="text"
-          id="body"
-          name="body"
-          value={newPost.body}
-          onChange={onChange}
-          className="post-input"
-        />
-        </div>
-        
-        <button type="submit" className="post-button">Submit</button>
-      </form>
-    </div>
-  );
+export default function PostForm({ title, body, newChange,newSubmit }) {
+return (
+<form onSubmit={newSubmit}>
+<div >
+<label>Title:  </label>
+<input name="title" value={title} onChange={newChange} /> {/*gets the titile from the user */}
+</div>
+<br></br>
+<div>
+<label  >Body: </label>
+<textarea name="body" value={body} onChange={newChange}/>{/*gets the body from the user */}
+<br></br>
+<button type="submit" >Submit</button> {}
+</div>
+
+</form>
+);
 }
